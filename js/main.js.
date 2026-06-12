@@ -1,0 +1,61 @@
+// 1. قائمة الجوال التفاعلية (Responsive Menu Toggle)
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// 2. التحقق من صحة بيانات الفورم (Form Validation)
+const contactForm = document.getElementById('contact-form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+
+contactForm.addEventListener('submit', (e) => {
+    let valid = true;
+
+    // إعادة تعيين الأخطاء السابقة
+    nameError.textContent = "";
+    emailError.textContent = "";
+
+    // التحقق من الاسم
+    if (username.value.trim() === "") {
+        nameError.textContent = "الرجاء إدخال الاسم بالكامل.";
+        valid = false;
+    }
+
+    // التحقق من البريد
+    if (email.value.trim() === "") {
+        emailError.textContent = "الرجاء إدخال البريد الإلكتروني.";
+        valid = false;
+    } else if (!validateEmail(email.value)) {
+        emailError.textContent = "صيغة البريد الإلكتروني غير صحيحة.";
+        valid = false;
+    }
+
+    // إذا وُجد خطأ، امنع إرسال الفورم
+    if (!valid) {
+        e.preventDefault();
+    } else {
+        e.preventDefault(); // لمنع إعادة تحميل الصفحة فقط للعرض للدكتور
+        alert("شكراً لك! تم استلام طلب العطر الخاص بك بنجاح.");
+        contactForm.reset();
+    }
+});
+
+// دالة التحقق من صيغة البريد الإلكتروني بـ Regex
+function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+
+// 3. زر إضافة للسلة التفاعلي
+const cartButtons = document.querySelectorAll('.add-to-cart-btn');
+cartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        alert("تم إضافة العطر إلى سلة المشتريات بنجاح! 🛒");
+    });
+});
