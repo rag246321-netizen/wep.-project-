@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر شذى العطور | للفخامة عنوان</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">شذى العطور</div>
+            <nav id="nav-links">
+                <a href="#home">الرئيسية</a>
+                <a href="#products">عطورنا</a>
+                <a href="#contact">تواصل معنا</a>
+            </nav>
+            <button class="toggle-btn" id="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>اكتشف عاصفة من الأحاسيس الفاخرة</h1>
+            <p>مجموعتنا الحصرية من العطور العالمية والشرقية تناسب ذوقك الرفيع.</p>
+            <a href="#products" class="btn">تسوق الآن</a>
+        </div>
+    </section>
+
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">الأكثر مبيعاً</h2>
+            <div class="products-grid">
+                
+                <div class="product-card">
+                    <img src="images/perfume1.jpg" alt="عطر العود الملكي">
+                    <h3>عطر العود الملكي</h3>
+                    <p class="price">250 ر.س</p>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/perfume2.jpg" alt="عطر اللافندر الساحر">
+                    <h3>عطر اللافندر الساحر</h3>
+                    <p class="price">180 ر.س</p>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/perfume1.jpg" alt="عطر مسك الفانيلا">
+                    <h3>عطر مسك الفانيلا</h3>
+                    <p class="price">195 ر.س</p>
+                    <button class="add-to-cart-btn">إضافة للسلة</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container form-container">
+            <h2>تواصل معنا لطلب خاص</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="username">الاسم الكامل:</label>
+                    <input type="text" id="username" placeholder="أدخل اسمك البريد">
+                    <span class="error-msg" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" placeholder="name@example.com">
+                    <span class="error-msg" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">رسالتك أو طلبك:</label>
+                    <textarea id="message" rows="4" placeholder="اكتب تفاصيل العطر المخصص..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">إرسال الطلب</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 جميع الحقوق محفوظة لمتجر شذى العطور.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
